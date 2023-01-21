@@ -1,24 +1,52 @@
-#include "push_swap.h"
 #include <stdio.h>
-void add_element(int element, stack *list_elements)
+#include<stdlib.h>
+typedef struct stack
 {
-    while (list_elements->number != 0)
+    int number;
+    int posicon;
+    struct stack *next_number;
+    struct stack *previus_number;
+} stack;
+static int posicon;
+void add_element(int element, stack **list_elements)
+{
+    stack *nova;
+
+    nova = malloc(sizeof(stack));
+    nova->number = element;
+    if ((*list_elements) == NULL)
     {
-        printf("OLA");
-        list_elements = list_elements->next_number;
+        (*list_elements) = nova;
+        (*list_elements)->previus_number = nova;
     }
-    list_elements = malloc(sizeof(stack));
-    list_elements->number = element;
+    else {
+        nova->previus_number = (*list_elements)->previus_number;
+        (*list_elements)->previus_number = nova;
+        nova->next_number = (*list_elements);
+        (*list_elements) = nova;
+    }
 }
 int main(int argc, char **argv)
 {
     
-    stack a, *apt = &a;
+    stack *apt;
+    
+    add_element(1, &apt);
+    add_element(2, &apt);
+    add_element(4, &apt);
 
-    add_element(1, apt);
-    add_element(1, apt);
-    printf("%i\n", a.number);
-    printf("%i\n", a.next_number->number);
+    printf("%i  posi:%i \n", apt->next_number->number, apt->posicon);
+
+
+
+    printf("%i  posi:%i \n", apt->previus_number->previus_number->number, apt->posicon);
+    printf("%i  posi:%i \n", apt->previus_number->previus_number->previus_number->number, apt->posicon);
+    printf("%i  posi:%i \n", apt->previus_number->previus_number->previus_number->previus_number->number, apt->posicon);
+    printf("%i  posi:%i \n", apt->previus_number->previus_number->previus_number->previus_number->previus_number->number, apt->posicon);
+    printf("%i  posi:%i \n", apt->previus_number->previus_number->previus_number->previus_number->previus_number->previus_number->number, apt->posicon);
+    
+    //printf("%i\n", apt->number);
+    //printf("%i\n", apt->next_number->number);
 
     return (0);
 }
