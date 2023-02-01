@@ -10,6 +10,7 @@ typedef struct List{
 	struct List *fist_element;
 }List;
 
-void p_value_last();
+void add_element(List **a, int value);
+void print_elements(List **lis);
 
 #endif 

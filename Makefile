@@ -6,7 +6,7 @@ FLGS= -will -werror -wextra
 
 SOURCE = ./
 
-OBJS= p_value_last.o
+OBJS= add_element.o print_elements.o
 
 all: $(NAME) $(a)
 
@@ -19,4 +19,4 @@ a:
 	gcc -c $< -o $@ 
 
 fclean:
-	rm -fr $(OBJS)
+	rm -fr $(OBJS) $(NAME)
