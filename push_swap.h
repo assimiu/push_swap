@@ -1,11 +1,13 @@
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
+#ifndef _PUSH_SWAP_H
+#define _PUSH_SWAP_H
+#include<stdio.h>
 #include<stdlib.h>
-typedef struct stack
-{
-    int number;
-    struct stack *next_number;
-} stack;
-void add_element(int element, stack *list_elements);
-#endif
+
+typedef struct List{
+        int value;
+        struct List *next_element;
+}List;
+
+void p_value_last();
+
+#endif 

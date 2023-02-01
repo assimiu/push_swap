@@ -1,16 +1,22 @@
-NAME=push_swap.a
-GCC=gcc
 
-OBJS=stack.o
 
-all: $(OBJS) $(NAME) $(CMP)
+NAME="push_swap.a"
 
-$(NAME):
-	ar -rcs $(NAME) $(OBJS)
+FLGS= -will -werror -wextra
 
-%.o : %.c 
-	$(GCC) -c $< -o $@ 
-CMP:
-	gcc push_swap.c -o push_swap.o && ./push_swap.o
+SOURCE = ./
+
+OBJS= p_value_last.o
+
+all: $(NAME) $(a)
+
+$(NAME): $(OBJS)
+	ar rv $(NAME) $(OBJS)
+a:
+	gcc main.c -L. push_swap.a -o main.o && ./main.o
+
+%.o: %.c
+	gcc -c $< -o $@ 
+
 fclean:
-	rm -fr $(OBJS) $(NAME)
+	rm -fr $(OBJS)
