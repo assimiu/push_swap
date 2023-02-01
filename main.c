@@ -22,6 +22,18 @@ void t(List **a, int value)
 
 }
 
+void in(List **lis)
+{
+	List *ptr;
+
+	ptr = *lis;
+	while(ptr != 0)
+	{
+		printf("%i\n", ptr->value);
+		ptr = ptr->next_element;
+	}
+}
+
 int main()
 {
 	struct List m, *a, *b;
@@ -31,6 +43,8 @@ int main()
 	t(&a, 618);
 	t(&a, 8);
 	t(&a, 2);
+	in(&a);
 	return 0;
 }
+
 
