@@ -2,6 +2,7 @@
 #define _PUSH_SWAP_H
 #include<stdio.h>
 #include<stdlib.h>
+#include <unistd.h>
 
 typedef struct List{
         int value;
@@ -12,6 +13,8 @@ typedef struct List{
         struct List *prev_element;
 }List;
 
+int swap_sx(List **x);
+int swap_ss(List **a, List **b);
 void add_element(List **a, int value);
 void print_elements(List **lis);
 

@@ -33,19 +33,12 @@ void add_fist_in_last(List **a, List **b)
 }
 */
 
-int swap_sx(List **x)
+int swap_px(List **a, List **b)
 {
 	int value;
 
-	if ((*x) == 0)
-		return (-1);
-	
-	if (((*x)->last_element->id) > 0)
-	{
-		value = (*x)->value;
-		(*x)->value = (*x)->next_element->value;
-		(*x)->next_element->value = value;
-	}
+
+	return (0);
 }
 
 int main()
@@ -53,11 +46,11 @@ int main()
 	struct List m, *a, *b;
 	a = 0;
 	b = 0;
-	add_element(&a, 18);
-	add_element(&a, 19);
-	add_element(&a, 20);
-	swap_sx(&a);
-	print_elements(&a);
+	add_element(&b, 20);
+	add_element(&b, 30);
+	add_element(&b, 40);
+	swap_px(&b, &b);
+	print_elements(&b);
 	return 0;
 }
 

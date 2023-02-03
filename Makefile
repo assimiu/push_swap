@@ -6,13 +6,13 @@ FLGS= -will -werror -wextra
 
 SOURCE = ./
 
-OBJS= add_element.o print_elements.o
+OBJS= add_element.o print_elements.o swap_sx.o swap_ss.o
 
 all: $(NAME) $(a)
 
 $(NAME): $(OBJS)
 	ar rv $(NAME) $(OBJS)
-a:
+a: re
 	gcc main.c -L. push_swap.a -o main.o && ./main.o
 
 %.o: %.c
