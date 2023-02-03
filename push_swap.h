@@ -3,6 +3,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <unistd.h>
+#define ERRO 1
+#define OK 0
 
 typedef struct List{
         int value;
@@ -15,7 +17,8 @@ typedef struct List{
 
 int swap_sx(List **x);
 int swap_ss(List **a, List **b);
+int swap_px(List **a, List **b);
 void add_element(List **a, int value);
 void print_elements(List **lis);
-
+void print_prev(List **list);
 #endif 

@@ -7,6 +7,6 @@ int swap_ss(List **a, List **b)
 
 	return1 = swap_sx(a);
 	return2 = swap_sx(b);
-	return (return1 == -1 ? return1 : return2);
+	return (return1 == ERRO ? return1 : return2);
 }
 
