@@ -9,6 +9,6 @@ void print_elements(List **lis)
 	{
 		printf("id: %i		value:%i\n",ptr->id, ptr->value);
 		ptr = ptr->next_element;
-		usleep(10000);
+		sleep(1);
 	}
 }
