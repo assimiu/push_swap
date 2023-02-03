@@ -36,8 +36,17 @@ void add_fist_in_last(List **a, List **b)
 int swap_px(List **a, List **b)
 {
 	int value;
+	List *xpo;
+	List *o;
 
-
+	xpo = (*a);
+	(*a)->next_element->prev_element = (*a);
+	(*a) = (*a)->next_element;
+	(*a)->last_element = xpo->last_element;
+	(*a)->last_element->next_element = (*a);
+	(*a)->fist_element = (*a);
+	
+	free(xpo);
 	return (0);
 }
 
