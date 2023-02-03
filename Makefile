@@ -20,3 +20,5 @@ a:
 
 fclean:
 	rm -fr $(OBJS) $(NAME)
+
+re: fclean all

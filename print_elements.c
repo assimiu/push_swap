@@ -7,7 +7,8 @@ void print_elements(List **lis)
 	ptr = *lis;
 	while(ptr != 0)
 	{
-		printf("%i\n", ptr->value);
+		printf("id: %i		value:%i\n",ptr->id, ptr->value);
 		ptr = ptr->next_element;
+		usleep(10000);
 	}
 }
