@@ -35,31 +35,16 @@ void add_fist_in_last(List **a, List **b)
 
 int swap_sx(List **x)
 {
-	List *xpo;
+	int value;
 
 	if ((*x) == 0)
 		return (-1);
 	
 	if (((*x)->last_element->id) > 0)
 	{
-		xpo = (*x);
-		(*x)->fist_element = (*x)->next_element->fist_element;
-		(*x)->next_element = (*x)->next_element->next_element;
-		(*x)->last_element = (*x)->next_element->last_element;
-		(*x)->prev_element = xpo;
-
-		xpo->next_element = (*x);
-		xpo->fist_element = xpo;
-		xpo->last_element = (*x)->last_element;
-		xpo->prev_element = (*x)->last_element;
-
-
-		(*x) = xpo;
-		(*x)->last_element = xpo->last_element;
-		(*x)->prev_element = xpo->last_element;
-		(*x)->fist_element = (*x);
-
-		printf("tem mais elementos\n");
+		value = (*x)->value;
+		(*x)->value = (*x)->next_element->value;
+		(*x)->next_element->value = value;
 	}
 }
 
