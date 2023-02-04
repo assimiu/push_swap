@@ -8,9 +8,11 @@ int main()
 	add_element(&b, 20);
 	add_element(&b, 30);
 	add_element(&b, 40);
-	m = malloc(sizeof(List));
+	add_element(&b, 50);
 
-	print_prev(&b);
+	swap_px(&b, &a);
+	swap_px(&b, &a);
+	print_next(&b);
 	return 0;
 }
 

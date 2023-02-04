@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void print_elements(List **lis)
+void print_next(List **lis)
 {
 	List *ptr;
 

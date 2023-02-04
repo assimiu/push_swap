@@ -6,7 +6,7 @@ FLGS= -will -werror -wextra
 
 SOURCE = ./
 
-OBJS= print_prev.o swap_px.o add_element.o print_elements.o swap_sx.o swap_ss.o
+OBJS= print_prev.o swap_px.o add_element.o print_next.o swap_sx.o swap_ss.o
 
 all: $(NAME) $(a)
 

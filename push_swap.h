@@ -19,6 +19,6 @@ int swap_sx(List **x);
 int swap_ss(List **a, List **b);
 int swap_px(List **a, List **b);
 void add_element(List **a, int value);
-void print_elements(List **lis);
+void print_next(List **lis);
 void print_prev(List **list);
 #endif 
