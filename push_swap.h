@@ -15,6 +15,8 @@ typedef struct List{
         struct List *prev_element;
 }List;
 
+int swap_rx(List **x);
+int swap_rr(List **a, List **b);
 int swap_sx(List **x);
 int swap_ss(List **a, List **b);
 int swap_px(List **a, List **b);

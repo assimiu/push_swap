@@ -11,6 +11,5 @@ void print_next(List **lis)
 	{
 		printf("id: %i		value:%i\n",ptr->id, ptr->value);
 		ptr = ptr->next_element;
-		sleep(1);
 	}
 }

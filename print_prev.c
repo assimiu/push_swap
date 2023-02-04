@@ -11,6 +11,5 @@ void print_prev(List **lis)
         {
                 printf("id: %i          value:%i\n",ptr->id, ptr->value);
                 ptr = ptr->prev_element;
-                sleep(1);
         }
 }

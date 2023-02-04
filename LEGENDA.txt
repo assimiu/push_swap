@@ -1,0 +1,11 @@
+Descricão de funcoes 
+
+swap_sx => Troca os primeiros elementos do topo da lista.
+
+swap_ss => Faz swap_sx para lista A e B
+
+swap_rx => Inverte os elemento da lista
+
+swap_rr => Faz swap_rx para lista A e B
+
+swap_px => pega primeiro elemento da lista 1 para lista 2 

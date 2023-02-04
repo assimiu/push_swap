@@ -6,7 +6,7 @@ int swap_px(List **a, List **b)
         int value;
 
         value = -1;
-        if (*a == 0)
+        if (*a == NULL)
                 return (ERRO);
        	value = (*a)->value;
 	add_element(b, value);
@@ -14,11 +14,11 @@ int swap_px(List **a, List **b)
 	{
 		(*a) = (*a)->next_element;
 		free((*a)->prev_element);
-	        (*a)->prev_element = 0;
+	        (*a)->prev_element = NULL;
 		return (OK);
 	}
 	free((*a));
-	(*a) = 0;
+	(*a) = NULL;
 	return (OK);
 }
 
