@@ -7,16 +7,31 @@ int swap_px(List **a, List **b)
 
         value = -1;
         if (*a == 0)
-                return (NULL);
-        value = (*a)->value;
-        
-        xpo = (*a)->next_element;
-        xpo->last_element = (*a)->last_element;
-        xpo->last_element->next_element = xpo;
-        free((*a));
-        (*a) = xpo;
-        (*a)->prev_element = (*a)->last_element;
-        (*a)->last_element->next_element = (*a);
-        add_element(b, value);
-        return (OK);
+                return (ERRO);
+       	value = (*a)->value;
+	add_element(b, value);
+	if((*a)->fist_element != (*a)->last_element)
+	{
+		(*a) = (*a)->next_element;
+		free((*a)->prev_element);
+	        (*a)->prev_element = 0;
+		return (OK);
+	}
+	free((*a));
+	(*a) = 0;
+	return (OK);
 }
+
+/*
+if ((*a)->next_element == 0)
+        {
+                free((*a));
+//              (*a) = 0;
+        }
+        else
+        {
+                (*a) = (*a)->next_element;
+                free((*a)->prev_element->fist_element);
+                (*a)->prev_element = 0;
+        }
+*/

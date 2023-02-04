@@ -5,6 +5,8 @@ void print_next(List **lis)
 	List *ptr;
 
 	ptr = *lis;
+	printf("\n======≠=======≠========≠=====≠=====\n");
+	printf("\nORDEM CRESCENTE\n");
 	while(ptr != 0)
 	{
 		printf("id: %i		value:%i\n",ptr->id, ptr->value);

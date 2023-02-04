@@ -6,7 +6,7 @@ int swap_sx(List **x)
 
 	if ((*x) == 0)
 		return (ERRO);
-	if (((*x)->last_element->id) > 0)
+	if (((*x)->id) > 1)
 	{
 		value = (*x)->value;
 		(*x)->value = (*x)->next_element->value;

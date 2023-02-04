@@ -13,41 +13,16 @@ void add_element(List **a, int value)
 		(*a) = ptr;
 		(*a)->fist_element = (*a);
 		(*a)->last_element = (*a);
-		(*a)->next_element = (*a);
-		(*a)->prev_element = (*a);
+		(*a)->next_element = 0;
+		(*a)->prev_element = 0;
 		(*a)->id = 1;
 		return ;
 	}
-	ptr->next_element = (*a);
 	(*a)->prev_element = ptr;
+	ptr->next_element = (*a);
 	ptr->last_element = (*a)->last_element;
-	ptr->prev_element = (*a)->last_element;
-	(*a)->last_element->next_element = ptr;
+	ptr->prev_element = 0;
 	ptr->fist_element = ptr;
 	ptr->id = (*a)->id + 1;
 	(*a) = ptr;
-
-		
-	
 }
-
-/*
-			if(*a == 0)
-		{
-			ptr->id = 1;
-			(*a) = ptr;
-			(*a)->fist_element = (*a);
-			(*a)->last_element = (*a);
-			(*a)->next_element = (*a);
-			(*a)->prev_element = (*a);
-			printf("Primeiro elemento a inserir\n");
-			return ;
-		}
-		ptr->fist_element = (*a);
-		ptr->prev_element = (*a)->last_element;
-		ptr->id = ((*a)->last_element->id) + 1;
-		(*a)->last_element->next_element = ptr;
-		(*a)->last_element = ptr;
-		(*a)->prev_element = ptr;
-		(*a)->last_element->next_element = (*a);
-		*/
