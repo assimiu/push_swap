@@ -16,14 +16,14 @@ $(NAME): $(OBJS)
 	ar rv $(NAME) $(OBJS)
 
 $(PATH_OBJS)%.o: $(PATH_SRC)%.c
-	gcc -c $< -o $@ 
+	gcc -c $< -o $@
 
 fclean:
 	rm -fr $(OBJS) $(NAME)
 
 re: fclean all
 
-a: re
+a:
 	gcc main.c -L$(PATH_OBJS) $(PATH_OBJS)push_swap.a -o main.o &&  ./main.o
 
-.PHONY:	all clean fclean re 
+.PHONY:	all clean fclean re

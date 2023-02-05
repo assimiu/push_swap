@@ -12,5 +12,5 @@ int swap_sx(List **x)
 		(*x)->value = (*x)->next_element->value;
 		(*x)->next_element->value = value;
 	}
-	return (OK);
+	return (OK_S);
 }

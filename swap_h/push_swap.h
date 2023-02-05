@@ -3,8 +3,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <unistd.h>
-#define ERRO 1
-#define OK 0
+#define ERRO -1
+#define OK_S 2
+#define OK_R 3
+#define OK_P 4
+
 
 typedef struct List{
         int value;

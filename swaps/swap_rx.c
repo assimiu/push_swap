@@ -3,8 +3,8 @@
 int swap_rx(List **x)
 {
 	List *ptr;
-    List *temp;
-    List *init;
+        List *temp;
+        List *init;
 
 	if (x == NULL || (*x) == NULL)
 		return (ERRO);
@@ -16,10 +16,11 @@ int swap_rx(List **x)
 	while (ptr->next_element != NULL)
 	{
 		ptr = ptr->next_element;
-		temp = ptr->next_element;
-		ptr->next_element = ptr->prev_element;
-		ptr->prev_element = temp;
+		temp = ptr->prev_element;
+		ptr->prev_element = ptr->next_element;
+                ptr->next_element = temp;
 	}
+    init->id = init->last_element->id;
     (*x) = init;
-    return (OK);
+    return (OK_R);
 }
