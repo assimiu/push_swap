@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../swap_h/push_swap.h"
 
 int swap_rr(List **a, List **b)
 {

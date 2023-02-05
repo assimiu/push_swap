@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "swap_h/push_swap.h"
 
 int main()
 {
@@ -7,6 +7,7 @@ int main()
 	b = 0;
 	add_element(&b, 20);
 	add_element(&b, 30);
+	print_next(&b);
 	return 0;
 }
 

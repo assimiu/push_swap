@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../swap_h/push_swap.h"
 
 void print_next(List **lis)
 {
