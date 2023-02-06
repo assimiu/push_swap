@@ -15,10 +15,12 @@ int swap_px(List **a, List **b)
 		(*a) = (*a)->next_element;
 		free((*a)->prev_element);
 	        (*a)->prev_element = NULL;
+		printf("P\n");
 		return (OK_P);
 	}
 	free((*a));
 	(*a) = NULL;
+	printf("P\n");
 	return (OK_P);
 }
 

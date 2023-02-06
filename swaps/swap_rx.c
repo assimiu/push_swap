@@ -2,28 +2,26 @@
 
 int swap_rx(List **x)
 {
-	List *ptr;
-        List *temp;
-        List *init;
+	List *ptr_l;
+	List *ptr_f;
+	int value_temp;
 
-	if (x == NULL || (*x) == NULL)
-		return (ERRO);
-	ptr = (*x)->last_element;
-	init = ptr;
-	ptr->next_element = ptr->prev_element;
-	ptr->prev_element = NULL;
-	ptr->last_element = (*x);
-	while (ptr->next_element != NULL)
+	ptr_l = (*x)->last_element;
+	ptr_f = (*x);
+	if (x != NULL && (*x)->id > 1)
 	{
-		ptr = ptr->next_element;
-		if(ptr != NULL)
+		while(ptr_f != ptr_l)
 		{
-			temp = ptr->prev_element;
-			ptr->prev_element = ptr->next_element;
-                	ptr->next_element = temp;
+			value_temp = ptr_f->value;
+			ptr_f->value = ptr_l->value;
+			ptr_l->value = value_temp;
+			ptr_f = ptr_f->next_element;
+			if (ptr_f->value == ptr_l->value)
+				break ;
+			ptr_l = ptr_l->prev_element;
 		}
+		printf("R\n");
+		return (OK_R);
 	}
-    init->id = init->last_element->id;
-    (*x) = init;
-    return (OK_R);
+    return (ERRO);
 }
