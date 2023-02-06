@@ -16,9 +16,12 @@ int swap_rx(List **x)
 	while (ptr->next_element != NULL)
 	{
 		ptr = ptr->next_element;
-		temp = ptr->prev_element;
-		ptr->prev_element = ptr->next_element;
-                ptr->next_element = temp;
+		if(ptr != NULL)
+		{
+			temp = ptr->prev_element;
+			ptr->prev_element = ptr->next_element;
+                	ptr->next_element = temp;
+		}
 	}
     init->id = init->last_element->id;
     (*x) = init;
