@@ -7,7 +7,10 @@ int is_order(List **a)
 	List *temp;
 
 	if ((*a) == NULL)
+{
+printf("b\n1\n");
 		return (1);
+}
 	ptr1 = (*a);
 	temp = (*a)->last_element;
 	while(ptr1 != NULL)
@@ -19,11 +22,12 @@ int is_order(List **a)
 				return (0);
 			if (temp->value < ptr2->value)
 				return (0);
-			if (temp == ptr2)
-				return (1);
 			ptr2 = ptr2->next_element;
 			if (ptr2 != NULL && ptr2->value > temp->value)
+			{
+				printf("\nb14\n");
 				return (1);
+			}
 			temp = temp->last_element;
 		}
 		ptr1 = ptr1->next_element;
