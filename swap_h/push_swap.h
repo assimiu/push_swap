@@ -18,6 +18,7 @@ typedef struct List{
         struct List *prev_element;
 }List;
 
+int is_order(List **a);
 int swap_rx(List **x);
 int swap_rr(List **a, List **b);
 int swap_sx(List **x);

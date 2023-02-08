@@ -6,6 +6,8 @@ int swap_rx(List **x)
 	List *ptr_f;
 	int value_temp;
 
+	if ((*x) == NULL)
+		return (ERRO);
 	ptr_l = (*x)->last_element;
 	ptr_f = (*x);
 	if (x != NULL && (*x)->id > 1)

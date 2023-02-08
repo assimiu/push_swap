@@ -8,7 +8,7 @@ PATH_SRC = swaps/
 
 OBJS= $(PATH_OBJS)swap_px.o $(PATH_OBJS)add_element.o $(PATH_OBJS)swap_sx.o\
 	  $(PATH_OBJS)swap_ss.o $(PATH_OBJS)swap_rx.o $(PATH_OBJS)swap_rr.o\
-	   $(PATH_OBJS)print_next.o $(PATH_OBJS)print_prev.o
+	   $(PATH_OBJS)print_next.o $(PATH_OBJS)print_prev.o $(PATH_OBJS)is_order.o
 
 all: $(OBJS) $(NAME)
 
