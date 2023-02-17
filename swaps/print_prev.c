@@ -5,13 +5,17 @@ void print_prev(List **lis)
         List *ptr;
 
         ptr = *lis;
-	printf("\n======≠=======≠========≠\n");
-	printf("     ORDEM DECRESCENTE:\n");
-	printf("=======≠========≠======≠\n");
+	ft_printstr("\n======≠=======≠========≠\n");
+	ft_printstr("     ORDEM DECRESCENTE:\n");
+	ft_printstr("=======≠========≠======≠\n");
         while(ptr != 0)
         {
-                printf("id: %i          value:%i\n",ptr->id, ptr->value);
+                ft_printstr("id: ");
+		ft_printnbr(ptr->id);
+		ft_printstr(" value: ");
+		ft_printnbr(ptr->value);
+		ft_printstr("\n");
                 ptr = ptr->prev_element;
         }
-	printf("=======≠========≠======≠\n\n");
+	ft_printstr("=======≠========≠======≠\n\n");
 }

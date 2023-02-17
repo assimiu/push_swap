@@ -1,6 +1,6 @@
 #include "../swap_h/push_swap.h"
 
-int swap_sx(List **x)
+int swap_sx(List **x, char *str)
 {
 	int value;
 
@@ -12,6 +12,6 @@ int swap_sx(List **x)
 		(*x)->value = (*x)->next_element->value;
 		(*x)->next_element->value = value;
 	}
-	printf("S\n");
+	ft_printstr(str);
 	return (OK_S);
 }

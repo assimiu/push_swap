@@ -10,11 +10,11 @@ int small_in_first(List **a)
                 return (ERRO);
         if ((*a)->next_element == NULL)
                 return (ERRO);
-        if ((*a)->value > (*a)->next_element->value)
-                retorno = swap_sx(a);
-        if ((*a)->value > (*a)->last_element->value)
+        if ((*a)->value < (*a)->next_element->value)
+                retorno = swap_sx(a, "sa\n");
+        if ((*a)->value < (*a)->last_element->value)
         {
-                retorno = swap_rx(a);
+                retorno = swap_rx(a, "ra\n");
                 small_in_first(a);
         }
         return (retorno);

@@ -1,6 +1,6 @@
 #include "../swap_h/push_swap.h"
 
-int swap_rx(List **x)
+int swap_rx(List **x, char *str)
 {
 	List *ptr_l;
 	List *ptr_f;
@@ -22,7 +22,7 @@ int swap_rx(List **x)
 				break ;
 			ptr_l = ptr_l->prev_element;
 		}
-		printf("R\n");
+		ft_printstr(str);
 		return (OK_R);
 	}
     return (ERRO);
